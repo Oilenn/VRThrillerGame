@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 51071f3eb97917240832441af90a38ed
+timeCreated: 1431858980
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Examples/Models/Materials/cube_chm_pn_tess.mat
+  uploadId: 290418

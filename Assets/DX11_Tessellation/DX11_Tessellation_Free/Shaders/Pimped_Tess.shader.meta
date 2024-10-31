@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1c9a2e1313ce2c74480c6e24b2a6166d
+timeCreated: 1492207662
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Shaders/Pimped_Tess.shader
+  uploadId: 290418

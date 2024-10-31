@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2983c95bc0d9ec647855914bab9716df
+timeCreated: 1431930049
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Examples/Models/Materials/spere_original.mat
+  uploadId: 290418

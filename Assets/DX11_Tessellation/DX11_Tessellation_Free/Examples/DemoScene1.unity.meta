@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a6b2279c411c8148af2ca6746a58550
+timeCreated: 1431891105
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Examples/DemoScene1.unity
+  uploadId: 290418

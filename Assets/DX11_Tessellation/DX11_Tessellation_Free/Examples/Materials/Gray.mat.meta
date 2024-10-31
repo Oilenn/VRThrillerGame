@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8f104006bfd82e44bbd6882b041436e9
+timeCreated: 1548628294
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Examples/Materials/Gray.mat
+  uploadId: 290418

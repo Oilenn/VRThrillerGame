@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b40ad6472dff5b54788c7db8ac41779e
+timeCreated: 1548447250
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Shaders/Tess_Standard_Core_Forward.cginc
+  uploadId: 290418

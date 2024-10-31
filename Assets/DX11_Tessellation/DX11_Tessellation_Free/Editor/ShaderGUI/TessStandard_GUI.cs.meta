@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c544ce5fdd2be5044b165dcf24d94f9e
+timeCreated: 1548623164
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Editor/ShaderGUI/TessStandard_GUI.cs
+  uploadId: 290418

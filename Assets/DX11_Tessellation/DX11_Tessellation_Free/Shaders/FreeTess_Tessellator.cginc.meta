@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e1ef489b315db884a918fded48b6a5a4
+timeCreated: 1492243797
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Shaders/FreeTess_Tessellator.cginc
+  uploadId: 290418

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 24f9325b7c382f14e8d82d19fbb070fa
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 37322
+  packageName: DX11 Tessellation Displacement
+  packageVersion: 3.0.0
+  assetPath: Assets/DX11_Tessellation/DX11_Tessellation_Free/Shaders/debug/UnityStandardMetaMod.cginc
+  uploadId: 290418
