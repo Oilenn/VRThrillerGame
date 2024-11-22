@@ -6,11 +6,12 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
 {
     [SerializeField] private Transform player;
     [SerializeField] private Enemy enemy;
-    [SerializeField] private float followSpeed = 2f; // Скорость следования
+    [SerializeField] private float followSpeed = 0.1f; // Скорость следования
     [SerializeField] private float distanceThreshold = 2f; // Минимальное расстояние до игрока
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         enemy = gameObject.GetComponent<Enemy>();   
     }
 
@@ -21,16 +22,33 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
         {
             // Вычисление вектора направления к игроку
             Vector3 direction = player.position - transform.position;
+
+            // Оставляем движение только в плоскости XZ (обнуляем Y)
+            direction.y = 0;
+
             float distance = direction.magnitude; // Расстояние до игрока
 
             // Если расстояние больше, чем заданный порог
             if (distance > distanceThreshold)
             {
-                // Нормализация вектора направления и движение врага
+                // Нормализация вектора направления
                 direction.Normalize();
+
+                // Поворот врага в направлении игрока (только по оси Y)
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, followSpeed * Time.deltaTime);
+
+                // Движение врага в сторону игрока
                 Vector3 movePosition = transform.position + direction * followSpeed * Time.deltaTime;
                 transform.position = movePosition;
             }
         }
+    }
+
+
+
+    public bool OnDeactivated()
+    {
+        return !enemy.IsAlive;
     }
 }

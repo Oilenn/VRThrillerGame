@@ -6,8 +6,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IEnemySub
 {
     //TODO упростить
+    [SerializeField] private GameObject playerObj;
     [SerializeField] private Player player;
 
+    private EnemyMovement enemyMovement;
     [SerializeField] private float health;
     private bool isNearbyPlayer;
 
@@ -20,7 +22,14 @@ public class Enemy : MonoBehaviour, IEnemySub
     private float damage = 5;
 
     public float Health { get { return health; } set { health = value; } }
-    public bool IsAlive { get { return health < 0; } }
+    public bool IsAlive { get { return health > 0; } }
+
+    public void Start()
+    {
+        playerObj = GameObject.FindGameObjectWithTag("Player");
+        player = playerObj.GetComponent<Player>();
+        enemyMovement = GetComponent<EnemyMovement>();
+    }
 
     public void OnTriggered()
     {
@@ -44,8 +53,14 @@ public class Enemy : MonoBehaviour, IEnemySub
         }
     }
 
+    public bool OnDeactivated()
+    {
+        return !IsAlive;
+    }
+
     public void Die()
     {
+        Debug.Log("Enemy died");
         Destroy(gameObject);
     }
 }

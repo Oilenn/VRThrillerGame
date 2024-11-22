@@ -18,13 +18,17 @@ public class EnemyController : MonoBehaviour
     {
         foreach (var enemy in enemies)
         {
+            if (enemy.OnDeactivated())
+            { 
+                enemies.Remove(enemy);
+            }
             try
             {
                 enemy.OnTriggered();
             }
-            catch
+            catch(MissingReferenceException ex)
             {
-                enemies.Remove(enemy);
+                continue;
             }
         }
     }
