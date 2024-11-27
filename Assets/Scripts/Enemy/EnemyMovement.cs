@@ -17,33 +17,29 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
 
     public void OnTriggered()
     {
-        // Проверка, что ссылка на игрока установлена
-        if (player != null)
+        if (player == null) return; // Если игрока нет, ничего не делаем
+
+        // Вычисление направления к игроку
+        Vector3 direction = player.position - transform.position;
+
+        // Убираем компонент по оси Y, чтобы двигаться только в плоскости XZ
+        direction.y = 0;
+
+        // Если враг дальше заданного расстояния
+        if (direction.magnitude > distanceThreshold)
         {
-            // Вычисление вектора направления к игроку
-            Vector3 direction = player.position - transform.position;
+            // Нормализация направления
+            direction.Normalize();
 
-            // Оставляем движение только в плоскости XZ (обнуляем Y)
-            direction.y = 0;
+            // Движение в сторону игрока
+            transform.position += direction * followSpeed * Time.deltaTime;
 
-            float distance = direction.magnitude; // Расстояние до игрока
-
-            // Если расстояние больше, чем заданный порог
-            if (distance > distanceThreshold)
-            {
-                // Нормализация вектора направления
-                direction.Normalize();
-
-                // Поворот врага в направлении игрока (только по оси Y)
-                Quaternion targetRotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, followSpeed * Time.deltaTime);
-
-                // Движение врага в сторону игрока
-                Vector3 movePosition = transform.position + direction * followSpeed * Time.deltaTime;
-                transform.position = movePosition;
-            }
+            // Поворот в сторону игрока (только по оси Y)
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, followSpeed * Time.deltaTime);
         }
     }
+
 
 
 
