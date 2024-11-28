@@ -7,7 +7,10 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
     [SerializeField] private Transform player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private float followSpeed = 0.1f; // Скорость следования
-    [SerializeField] private float distanceThreshold = 2f; // Минимальное расстояние до игрока
+    [SerializeField] private float distanceThreshold = 1.4f; // Минимальное расстояние до игрока
+
+    private bool isStopped;
+    public bool IsStopped {  get { return isStopped; } }
 
     private void Start()
     {
@@ -28,6 +31,7 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
         // Если враг дальше заданного расстояния
         if (direction.magnitude > distanceThreshold)
         {
+            isStopped = false;
             // Нормализация направления
             direction.Normalize();
 
@@ -37,6 +41,10 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
             // Поворот в сторону игрока (только по оси Y)
             Quaternion targetRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, followSpeed * Time.deltaTime);
+        }
+        else
+        {
+            isStopped = true;
         }
     }
 

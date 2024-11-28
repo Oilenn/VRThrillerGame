@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(EnemyMovement))]
 public class Enemy : MonoBehaviour, IEnemySub
@@ -9,14 +10,18 @@ public class Enemy : MonoBehaviour, IEnemySub
     [SerializeField] private GameObject playerObj;
     [SerializeField] private Player player;
 
+    [SerializeField] private Slider bar;
+    private EnemyHealthBar healthBar;
     private EnemyMovement enemyMovement;
-    [SerializeField] private float health;
+    [SerializeField] private float health = 10;
     private bool isNearbyPlayer;
+
+    private AudioSource punchAudio;
 
     //Таймер для нанесения урона
     //TODO перенести в отдельный класс
     private float timer = 0;
-    private float endOfTime = 5;
+    private float endOfTime = 1;
 
     //Дамаг врага
     private float damage = 5;
@@ -26,6 +31,9 @@ public class Enemy : MonoBehaviour, IEnemySub
 
     public void Start()
     {
+        punchAudio = GetComponent<AudioSource>();
+        healthBar = new EnemyHealthBar(health, bar);
+        healthBar.UpdateHealthBar(health);
         playerObj = GameObject.FindGameObjectWithTag("Player");
         player = playerObj.GetComponent<Player>();
         enemyMovement = GetComponent<EnemyMovement>();
@@ -33,18 +41,24 @@ public class Enemy : MonoBehaviour, IEnemySub
 
     public void OnTriggered()
     {
-        if(!IsAlive)
+
+        healthBar.UpdateHealthBar(health);
+
+        if (!IsAlive)
         {
             Die();
         }
 
-        if (isNearbyPlayer)
+        if (enemyMovement.IsStopped)
         {
-            timer = Time.deltaTime;
+            Debug.Log("SDFd");
+            timer += Time.deltaTime;
             if(timer >= endOfTime)
             {
-                player.Health -= damage;
                 timer = 0;
+                punchAudio.Play();
+                player.Health -= damage;
+                player.PlayPainSound();
             }
         }
         else

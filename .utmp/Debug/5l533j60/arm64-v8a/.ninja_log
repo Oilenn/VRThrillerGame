@@ -1,0 +1,11 @@
+# ninja log v5
+212	3757	7544581425773842	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	8434ff21247a31
+3760	11582	7544581470763011	D:/Unity/Projects/VRHorrorProject/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5l533j60/obj/arm64-v8a/libswappywrapper.so	dab370edc91f4fb2
+171	11825	7544581508188476	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e99fe57839ba6737
+182	11838	7544581503697507	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	3d6f20e8902f65e2
+202	11851	7544581507878461	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	56b1f4c9476823f6
+140	11858	7544581508908544	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	f5b60d9594f83dd1
+3	11946	7544581511217172	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	35eb4424ef46cb6
+127	12264	7544581514794302	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	720ab01622b8fc3
+192	12311	7544581515234314	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	14906aad991527b7
+12312	13325	7544581520467357	D:/Unity/Projects/VRHorrorProject/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5l533j60/obj/arm64-v8a/libgame.so	bd21524d5ab0f921
