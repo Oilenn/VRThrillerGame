@@ -138,11 +138,7 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: 8787389739111488338, guid: 9cf6b3dd0efda7d49b01cd2974b6e75e, type: 2}
-  - {fileID: 11400000, guid: 2b434c56e31ee1c4199a8b56c85db37a, type: 2}
-  - {fileID: 6668727172636828386, guid: 5c57767b9a3b0374ca710d2276a23984, type: 2}
-  - {fileID: 11400000, guid: d55f44ba5785c744fa71ce66874ce84a, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -164,6 +160,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
+    Android: com.DefaultCompany.VRHorrorProject
     Standalone: com.DefaultCompany.VRHorrorProject
   buildNumber:
     Bratwurst: 0
@@ -174,7 +171,7 @@ PlayerSettings:
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
