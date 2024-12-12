@@ -15,7 +15,7 @@ public class ContinousMovement : MonoBehaviour
     private Vector2 inputAxis;
     private CharacterController character;
     private XROrigin rig;
-    public float gravity = -9.81f;
+    public float gravity = -9.81f; 
     private readonly float heightOffset = 0.2f;
     private float fallingSpeed;
     public float activationThreshold = 0.0000000001f;
