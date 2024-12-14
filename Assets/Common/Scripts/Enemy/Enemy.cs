@@ -41,7 +41,10 @@ public class Enemy : MonoBehaviour, IEnemySub
 
     public void OnTriggered()
     {
-        healthBar.UpdateHealthBar(health);
+        if (healthBar != null)
+        {
+            healthBar.UpdateHealthBar(health);
+        }
 
         if (!IsAlive)
         {
