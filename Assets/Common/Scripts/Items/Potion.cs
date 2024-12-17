@@ -5,7 +5,7 @@ using UnityEngine;
 public class Potion : MonoBehaviour
 {
     //Количество на которое прибавиться здоровье игрока
-    private float healthPoints = 50;
+    private float healthPoints = 25;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,6 +17,4 @@ public class Potion : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    
 }

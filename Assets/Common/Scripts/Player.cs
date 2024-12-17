@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] Slider healthBar;
 
-    [SerializeField] private float health;
+    [SerializeField] private float health = 100;
 
     private AudioSource playerPain;
 
