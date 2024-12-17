@@ -18,7 +18,7 @@ public class InteractionButton : MonoBehaviour
     {
         if (isPressed)
         {
-
+            Debug.Log("Pressed");
         }
     }
 }

@@ -28,6 +28,7 @@ public class SelfMoveWall : MonoBehaviour
 
     private void Move()
     {
+        Debug.Log("Move");
         transform.position += Vector3.up * speed * Time.deltaTime;
     }
 
