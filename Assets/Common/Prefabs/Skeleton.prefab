@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemy: {fileID: 0}
-  followSpeed: 2
+  followSpeed: 0.7
   distanceThreshold: 1.4
 --- !u!114 &7372607930374964507
 MonoBehaviour:
