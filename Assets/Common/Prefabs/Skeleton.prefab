@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 2933754597504147990}
-  health: 40
+  health: 30
 --- !u!54 &6246229753804193869
 Rigidbody:
   m_ObjectHideFlags: 0
