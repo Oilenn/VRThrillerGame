@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
@@ -9,6 +10,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private GameObject settings;
     [SerializeField] private GameObject volume;
     [SerializeField] private GameObject creators;
+    [SerializeField] private AudioMixer mixer;
     //[SerializeField] private List<GameObject> stages = new List<GameObject>();
     //private int currentStage = 0;
 
@@ -52,13 +54,20 @@ public class MainMenuController : MonoBehaviour
         Application.Quit();
     }
 
+    //public void IncreaseAudio()
+    //{
+    //    out float vol;
+    //    mixer.GetFloat("Master", out vol);
+    //    mixer.SetFloat("Master", vol - 1);
+    //}
+
     public void ChangeVolume(int volume)
     {
-
+        mixer.SetFloat("Master", volume);
     }
 
-    public void ChangeMusic(int music)
-    {
+    //public void ChangeMusic(int music)
+    //{
 
-    }
+    //}
 }

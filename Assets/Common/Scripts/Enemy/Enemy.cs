@@ -32,8 +32,13 @@ public class Enemy : MonoBehaviour, IEnemySub
     public void Start()
     {
         punchAudio = GetComponent<AudioSource>();
-        healthBar = new EnemyHealthBar(health, bar);
-        healthBar.UpdateHealthBar(health);
+        
+        if (bar != null)
+        {
+            healthBar = new EnemyHealthBar(health, bar);
+
+            healthBar.UpdateHealthBar(health);
+        }
         playerObj = GameObject.FindGameObjectWithTag("Player");
         player = playerObj.GetComponent<Player>();
         enemyMovement = GetComponent<EnemyMovement>();

@@ -12,6 +12,15 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
     private bool isStopped;
     public bool IsStopped {  get { return isStopped; } }
 
+
+    private bool isPlayerFound
+    {
+        get
+        {
+            return Vector3.Distance(transform.position, player.transform.position) < 12;
+        }
+    }
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -22,29 +31,32 @@ public class EnemyMovement : MonoBehaviour, IEnemySub
     {
         if (player == null) return; // Если игрока нет, ничего не делаем
 
-        // Вычисление направления к игроку
-        Vector3 direction = player.position - transform.position;
-
-        // Убираем компонент по оси Y, чтобы двигаться только в плоскости XZ
-        direction.y = 0;
-
-        // Если враг дальше заданного расстояния
-        if (direction.magnitude > distanceThreshold)
+        if (isPlayerFound)
         {
-            isStopped = false;
-            // Нормализация направления
-            direction.Normalize();
+            // Вычисление направления к игроку
+            Vector3 direction = player.position - transform.position;
 
-            // Движение в сторону игрока
-            transform.position += direction * followSpeed * Time.deltaTime;
+            // Убираем компонент по оси Y, чтобы двигаться только в плоскости XZ
+            direction.y = 0;
 
-            // Поворот в сторону игрока (только по оси Y)
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, followSpeed * Time.deltaTime);
-        }
-        else
-        {
-            isStopped = true;
+            // Если враг дальше заданного расстояния
+            if (direction.magnitude > distanceThreshold)
+            {
+                isStopped = false;
+                // Нормализация направления
+                direction.Normalize();
+
+                // Движение в сторону игрока
+                transform.position += direction * followSpeed * Time.deltaTime;
+
+                // Поворот в сторону игрока (только по оси Y)
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, followSpeed * Time.deltaTime);
+            }
+            else
+            {
+                isStopped = true;
+            }
         }
     }
 

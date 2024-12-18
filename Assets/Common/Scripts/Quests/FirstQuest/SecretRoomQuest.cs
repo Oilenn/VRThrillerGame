@@ -9,7 +9,7 @@ public class SecretRoomQuest : Quest
 
     public override void StepOn()
     {
-        if (button.IsPressed)
+        if (button.IsPressed && !wall.IsMoving)
         {
             wall.StartMove();
         }

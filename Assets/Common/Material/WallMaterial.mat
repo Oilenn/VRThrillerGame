@@ -83,28 +83,28 @@ Material:
     - _DiffuseAO: 0
     - _DispOffset: 0.507
     - _DispPhong: 0
-    - _Displacement: 0.573
+    - _Displacement: 0
     - _DstBlend: 0
     - _GI_AO: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.132
     - _GlossyReflections: 0
-    - _Metallic: 0
+    - _Metallic: 0.615
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.047975
-    - _Phong: 0
-    - _ShadowLOD: 0
+    - _Parallax: 0.005
+    - _Phong: 0.292
+    - _ShadowLOD: 0.418
     - _SmoothnessTextureChannel: 0
     - _SpecAO: 0
     - _SpecBurn: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 1
-    - _Tess: 11.7
+    - _Tess: 5.9
     - _TessMode: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _maxDist: 5
+    - _maxDist: 0
     m_Colors:
     - _Color: {r: 0.690566, g: 0.603268, b: 0.603268, a: 1}
     - _Displacement_TO: {r: 1, g: 1, b: 0, a: 0}

@@ -16,14 +16,18 @@ public class SelfMoveWall : MonoBehaviour
     
     public float speed = 2f; // Скорость подъёма стены
 
+    private AudioSource audioSource;
+
     public void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         start = transform.position;
     }
 
     public void StartMove()
     {
         isMoving = true;
+        audioSource.Play();
     }
 
     private void Move()
